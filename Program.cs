@@ -10,12 +10,14 @@
             string htmlFilePath = @"D:\C#programs\FileReadWritePoc\bin\Debug\net8.0\Text File\Text.html";
             string defaultHtmlContent = "<html><body><h1>Welcome to Samuel's HTML File</h1></body></html>";
 
+            Console.WriteLine("HTML File");
             WriteFile(htmlFilePath, defaultHtmlContent);
             ReadFile(htmlFilePath);
-            
+
 
             //Read Write Text File
-
+            Console.WriteLine("\n========================================");
+            Console.WriteLine("\nText File");
             string textFilePath = @"D:\C#programs\FileReadWritePoc\bin\Debug\net8.0\Text File\Text.txt";
             string textContent = "Welcome to Samuel's Text File";
 
@@ -24,7 +26,8 @@
 
 
             //Append username 
-
+            Console.WriteLine("==========================================");
+            Console.WriteLine("Append File");
             string filePath = @"D:\C#programs\FileReadWritePoc\bin\Debug\net8.0\Text File\Append.txt";
             AppendUsername(filePath);
 
@@ -44,7 +47,7 @@
             if (File.Exists(path))
             {
                 string content = File.ReadAllText(path);
-                Console.Write("\nHTML File Content:");
+                Console.Write("\nFile Content:");
                 Console.WriteLine(content);
             }
             else
